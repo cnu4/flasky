@@ -147,7 +147,7 @@ class User(UserMixin, db.Model):
         self.last_seen = datetime.utcnow()
         db.session.add(self)
 
-    def gravatar(self, size=100, default='identicon', rating='g'):
+    def gravatar(self, size=100, default='retro', rating='g'):
         url = 'https://secure.gravatar.com/avatar'
         hash = self.avatar_hash or hashlib.md5(self.email.encode('utf-8')).hexdigest()
         return '{url}/{hash}?s={size}&d={default}&r={rating}'.format(
