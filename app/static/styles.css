@@ -1,12 +1,10 @@
 .profile-thumbnail {
-	position: absolute;
+    position: absolute;
 }
-
 .profile-header {
-	min-height: 260px;
-	margin-left: 280px;
+    min-height: 260px;
+    margin-left: 280px;
 }
-
 ul.posts {
     list-style-type: none;
     padding: 0px;
@@ -64,4 +62,16 @@ div.flask-pagedown-preview h3 {
 }
 .post-body h3 {
     font-size: 120%;
+}
+.table.followers tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+a:hover{text-decoration:none;}
+a.followers{
+    color:#000000;
+    margin-left: 4px;
+}
+a.following{
+    color:#000000;
+    margin-left: 4px;
 }
