@@ -11,6 +11,7 @@
     <thead><tr><th>用户</th><th>关注时间</th></tr></thead>
     {% for follow in follows %}
     <tr>
+        {% if user != follow.user %}
         <td>
             <a href="{{ url_for('.user', username = follow.user.username) }}">
                 <img class="img-rounded" src="{{ follow.user.gravatar(size=32) }}">
@@ -18,6 +19,7 @@
             </a>
         </td>
         <td>{{ moment(follow.timestamp).format('L') }}</td>
+        {% endif %}
     </tr>
     {% endfor %}
 </table>
